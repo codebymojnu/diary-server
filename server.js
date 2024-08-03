@@ -18,7 +18,7 @@ app.use(cors());
 app.use('/api/notes', noteRoutes);
 
 // MongoDB connection
-mongoose.connect('mongodb://localhost:27017/diary', {
+mongoose.connect('mongodb://admin:mojnu13@ac-r7tsoou-shard-00-00.dgjlksi.mongodb.net:27017,ac-r7tsoou-shard-00-01.dgjlksi.mongodb.net:27017,ac-r7tsoou-shard-00-02.dgjlksi.mongodb.net:27017/diary?replicaSet=atlas-6g6n8a-shard-0&ssl=true&authSource=admin', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 });
