@@ -1,4 +1,3 @@
-// controllers/noteController.js
 const Note = require('../models/note');
 
 // Save a new note
@@ -22,7 +21,8 @@ exports.createNote = async (req, res) => {
 // Get all notes
 exports.getNotes = async (req, res) => {
     try {
-        const notes = await Note.find();
+        // Find all notes and sort them by creation date in descending order
+        const notes = await Note.find().sort({ createdAt: -1 });
         res.status(200).json(notes);
     } catch (error) {
         res.status(500).json({ message: error.message });
